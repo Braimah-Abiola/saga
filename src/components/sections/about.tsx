@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 
 const AboutSection = () => {
   return (
-    <div className="w-full mt-40">
+    <div id="about" className="w-full mt-40">
       <Wrapper>
         <div className="flex items-start justify-between w-full gap-20 px-20">
           <div className="w-full h-[500px] rounded-xl relative">

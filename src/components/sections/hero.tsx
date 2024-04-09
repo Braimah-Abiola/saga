@@ -4,7 +4,7 @@ import Wrapper from "../wrapper/wrapper";
 
 const HeroSection = () => {
   return (
-    <div className="w-full relative">
+    <div id="hero" className="w-full relative">
       <Wrapper className="flex flex-col items-center pt-20 relative">
         <Image
           width={100}

@@ -5,12 +5,13 @@ import { useLayoutEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const navigation = [
-  { name: "Home", link: "/" },
+  { name: "Home", link: "/#hero" },
   { name: "About Us", link: "/#about" },
-  { name: "Overview", link: "/#overview" },
+  //{ name: "Overview", link: "/#overview" },
   { name: "Services", link: "/#services" },
-  { name: "Staff", link: "/#staff" },
-  { name: "Contact Us", link: "/#contact-us" },
+  // { name: "Staff", link: "/#staff" },
+  { name: "News", link: "/#news" },
+  { name: "Contact Us", link: "/#contact" },
 ];
 
 const useScrollspy = (ids: any, offset = 0) => {
@@ -53,7 +54,7 @@ export const NavItems = () => {
   const activeLink = useScrollspy(ids, 54); // Assuming navigation height is 54px
 
   return (
-    <div className="flex gap-10">
+    <div className="flex gap-10 w-full">
       {navigation.map((item) => {
         const isSelected = item.link.slice(2) === activeLink; // Check if current link matches active section
         return (

@@ -51,7 +51,7 @@ const NavigationSection = () => {
         </Link>
 
         <div className="hidden lg:block w-full">
-          <div className="flex flex-row items-center gap-10 2xl:gap-16">
+          <div className="flex flex-row items-center ml-10 gap-10 2xl:gap-16 w-full">
             <NavItems />
           </div>
         </div>

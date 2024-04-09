@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 const NewSection = () => {
   return (
-    <div className="mt-40">
+    <div id="news" className="mt-40">
       <Wrapper className="py-20">
         <div className="w-full flex items-center justify-between gap-14 px-20">
           <div className="w-full flex flex-col items-start">
