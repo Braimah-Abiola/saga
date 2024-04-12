@@ -10,7 +10,7 @@ const NewSection = () => {
         <h2 className="text-[#131E42] text-4xl md:text-5xl font-semibold md:px-20 mb-10">
           News
         </h2>
-        <div className="w-full flex flex-col md:flex-row items-center md:justify-between gap-14 md:px-20">
+        <div className="w-full flex flex-col md:flex-row items-center md:justify-between md:gap-14 md:px-20">
           <div className="w-full flex flex-col items-start mb-12 md:mb-0">
             <div className="w-full h-[500px] relative rounded-xl overflow-hidden group">
               <Image
@@ -46,7 +46,7 @@ const NewSection = () => {
             </Link>
           </div>
         </div>
-        <div className="w-full flex flex-col md:flex-row items-center md:justify-between gap-14 md:px-20 md:mt-20">
+        <div className="w-full flex flex-col md:flex-row items-center md:justify-between md:gap-14 md:px-20 md:mt-20">
           <div className="w-full flex flex-col items-start mt-12 md:mt-0 mb-12 md:mb-0">
             <div className="w-full h-[500px] relative rounded-xl group overflow-hidden">
               <Image

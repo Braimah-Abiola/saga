@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const AboutSection = () => {
   return (
-    <div id="about" className="w-full mt-10 md:mt-40">
+    <div id="about" className="w-full mt-0 md:mt-40">
       <Wrapper>
         <div className="flex flex-col-reverse md:flex-row items-start justify-between w-full gap-0 md:gap-20 md:px-20">
           <div className="w-full h-[400px] md:h-[500px] rounded-xl relative">
@@ -37,7 +37,7 @@ const AboutSection = () => {
           </div>
         </div>
       </Wrapper>
-      <Wrapper className="mt-40 px-0 2xl:px-0">
+      <Wrapper className="mt-20 md:mt-40 px-0 2xl:px-0">
         <div className="flex flex-col items-start w-full">
           <div className="w-full flex-col md:flex-row items-center justify-between px-3 md:px-20 xl:px-10 2xl:px-40">
             <h2 className="text-[#131E42] text-4xl md:text-5xl font-semibold mb-4 md:mb-0">
@@ -46,7 +46,7 @@ const AboutSection = () => {
           </div>
 
           <Marquee autoFill speed={200}>
-            <div className="grid grid-cols-5 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 2xl:gap-8 pb-10 pt-10 md:pt-10 md:pb-5">
+            <div className="grid grid-cols-5 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 2xl:gap-8 pb-10 pt-5 md:pt-10 md:pb-5">
               <div className=" w-[300px] h-[400px] rounded-xl ml-4">
                 <div className="w-full h-full relative">
                   <Image
