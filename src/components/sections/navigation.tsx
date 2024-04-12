@@ -40,7 +40,7 @@ const NavigationSection = () => {
       id="home"
     >
       <Wrapper className="flex flex-row justify-between items-center 2xl:px-40">
-        <Link href="/" className="w-full">
+        <Link href="/" className="">
           <div className="relative w-[135px] h-[55px] md:w-[135px] md:h-[55px] hover:scale-110 transition-all ease-in-out">
             <Image
               quality={100}
@@ -52,13 +52,13 @@ const NavigationSection = () => {
           </div>
         </Link>
 
-        <div className="hidden lg:block w-full">
+        <div className="hidden lg:block">
           <div className="flex flex-row items-center ml-10 gap-10 2xl:gap-16 w-full">
             <NavItems />
           </div>
         </div>
 
-        <div className="hidden lg:block w-full ">
+        <div className="hidden lg:block ">
           <NavActions />
         </div>
 

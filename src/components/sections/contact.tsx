@@ -56,7 +56,7 @@ const ContactSection = () => {
       <Wrapper>
         <div className="w-full md:px-20">
           <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4 md:gap-10 md:h-[53rem]">
-            <div className="w-full flex flex-col items-start gap-4">
+            <div className="w-full flex flex-col items-start gap-4 h-full">
               <div className="h-fit border border-[#131E42] rounded-xl px-4 md:px-8 w-full py-6 md:py-14">
                 <div className=" w-fit px-4 py-1 md:py-2 rounded-full border border-[#131E42] flex items-center justify-center">
                   <p className=" text-lg font-normal text-[#131E42]">
@@ -71,7 +71,7 @@ const ContactSection = () => {
                   <br className=" hidden md:block" /> sed do eiusmod tempor
                 </p>
               </div>
-              <div className="h-fit border border-[#131E42] rounded-xl px-4 md:px-8 w-full py-8 md:py-12 bg-white">
+              <div className="h-full border border-[#131E42] rounded-xl px-4 md:px-8 w-full py-8 md:py-12 bg-white">
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)}>
                     <FormField
