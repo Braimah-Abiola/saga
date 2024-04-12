@@ -5,10 +5,10 @@ import { Mail, Phone } from "lucide-react";
 
 const FooterSection = () => {
   return (
-    <div className="mt-[20rem]">
+    <div className="mt-[10rem]">
       <Wrapper className="py-10">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="w-full">
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between px-20">
+          <Link href="/" className="md:w-full">
             <div className="relative w-[135px] h-[55px] md:w-[135px] md:h-[55px] hover:scale-110 transition-all ease-in-out">
               <Image
                 quality={100}
@@ -19,7 +19,7 @@ const FooterSection = () => {
               />
             </div>
           </Link>
-          <div className="flex items-center gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-8 mt-8">
             <div className="flex items-center gap-2">
               <Mail />
               <p>skage@sagascholarships.com</p>

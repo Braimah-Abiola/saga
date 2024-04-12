@@ -2,13 +2,14 @@ import Image from "next/image";
 import Wrapper from "../wrapper/wrapper";
 import { Button } from "../ui/button";
 import Marquee from "react-fast-marquee";
+import Link from "next/link";
 
 const AboutSection = () => {
   return (
-    <div id="about" className="w-full mt-40">
+    <div id="about" className="w-full mt-10 md:mt-40">
       <Wrapper>
-        <div className="flex items-start justify-between w-full gap-20 px-20">
-          <div className="w-full h-[500px] rounded-xl relative">
+        <div className="flex flex-col-reverse md:flex-row items-start justify-between w-full gap-0 md:gap-20 md:px-20">
+          <div className="w-full h-[400px] md:h-[500px] rounded-xl relative">
             <Image
               fill
               className=" object-cover object-center rounded-xl"
@@ -18,7 +19,9 @@ const AboutSection = () => {
             />
           </div>
           <div className="w-full flex flex-col items-start py-10">
-            <h2 className="text-[#131E42] text-5xl font-semibold">About Us</h2>
+            <h2 className="text-[#131E42] text-4xl md:text-5xl font-semibold">
+              About Us
+            </h2>
             <p className=" font-normal text-lg text-[#131E42]/90 mt-4">
               Saga Scholarships is led by an experienced team who have all been
               through this process and graduated as student-athletes. Since
@@ -26,23 +29,27 @@ const AboutSection = () => {
               through the process of becoming student-athletes by sharing our
               expertise.
             </p>
-            <Button className="mt-6" variant="outline">
-              Learn More
-            </Button>
+            <Link href="/about-us">
+              <Button className="mt-6" variant="outline">
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
       </Wrapper>
       <Wrapper className="mt-40 px-0 2xl:px-0">
         <div className="flex flex-col items-start w-full">
-          <div className="w-full flex items-center justify-between px-3 md:px-20 xl:px-10 2xl:px-20">
-            <h2 className="text-[#131E42] text-5xl font-semibold">
+          <div className="w-full flex-col md:flex-row items-center justify-between px-3 md:px-20 xl:px-10 2xl:px-40">
+            <h2 className="text-[#131E42] text-4xl md:text-5xl font-semibold mb-4 md:mb-0">
               Our Student-Athletes
             </h2>
-            <Button variant="outline">See our athletes</Button>
+            <Link href="/athletes">
+              <Button variant="outline">See our athletes</Button>
+            </Link>
           </div>
 
           <Marquee autoFill speed={200}>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 2xl:gap-8 pb-10 pt-5 md:pt-10 md:pb-5">
+            <div className="grid grid-cols-5 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 2xl:gap-8 pb-10 pt-10 md:pt-10 md:pb-5">
               <div className=" w-[300px] h-[400px] rounded-xl ml-4">
                 <div className="w-full h-full relative">
                   <Image
@@ -152,7 +159,7 @@ const AboutSection = () => {
           </Marquee>
 
           <Marquee autoFill speed={150}>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 2xl:gap-8 pb-10 pt-5 md:pt-0 md:pb-5">
+            <div className="grid grid-cols-5 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 2xl:gap-8 pb-10 pt-5 md:pt-0 md:pb-5">
               <div className=" w-[300px] h-[400px] rounded-xl ml-4">
                 <div className="w-full h-full relative">
                   <Image

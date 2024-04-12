@@ -3,10 +3,10 @@ import Wrapper from "../wrapper/wrapper";
 
 const ServiceSection = () => {
   return (
-    <div id="services" className="mt-40">
+    <div id="services" className="mt-20 md:mt-40">
       <Wrapper className="py-20">
-        <div className="flex items-center justify-between w-full h-[50rem] gap-10">
-          <div className="w-[50%] h-full">
+        <div className="flex flex-col md:flex-row items-center justify-between w-full md:h-[45rem] gap-4 md:gap-10 md:px-20">
+          <div className=" w-full md:w-[50%] h-[40rem] md:h-full">
             <div className="w-full h-full relative rounded-2xl">
               <Image
                 fill
@@ -17,36 +17,36 @@ const ServiceSection = () => {
               />
             </div>
           </div>
-          <div className="w-full h-full flex flex-col justify-between gap-6">
-            <div className="w-full flex items-center justify-between h-full gap-6">
-              <div className="w-full h-full border border-[#131E42] rounded-xl flex flex-col items-center">
-                <div className=" flex items-center justify-center bg-[#E9E9E9] rounded-full aspect-square h-28 w-28 mt-20">
+          <div className="w-full h-full flex flex-col justify-between gap-4 md:gap-6">
+            <div className="w-full flex flex-col md:flex-row items-center justify-between h-fit md:h-full gap-4 md:gap-6">
+              <div className="w-full h-fit md:h-full py-16 md:py-0 border border-[#131E42] rounded-xl flex flex-col items-center">
+                <div className=" flex items-center justify-center bg-[#E9E9E9] rounded-full aspect-square h-24 md:h-28 w-24 md:w-28 md:mt-20">
                   <Image width={52} height={52} src="/home.png" alt="Home" />
                 </div>
-                <h3 className="text-3xl font-medium text-center mt-4 text-[#131E42]">
+                <h3 className="text-2xl px-5 font-medium text-center mt-4 text-[#131E42]">
                   Admission to college/ High School
                 </h3>
               </div>
-              <div className="w-full h-full border border-[#131E42] rounded-xl flex flex-col items-center">
-                <div className=" flex items-center justify-center bg-[#E9E9E9] rounded-full aspect-square mt-20 h-28 w-28">
+              <div className="w-full h-fit py-16 md:py-0 md:h-full border border-[#131E42] rounded-xl flex flex-col items-center">
+                <div className=" flex items-center justify-center bg-[#E9E9E9] rounded-full aspect-square md:mt-20 h-24 md:h-28 w-24 md:w-28">
                   <Image width={52} height={52} src="/books.png" alt="Books" />
                 </div>
-                <h3 className="text-3xl font-medium text-center mt-4 text-[#131E42]">
+                <h3 className="text-2xl px-5 font-medium text-center mt-4 text-[#131E42]">
                   Preparation for SAT/TOFL
                 </h3>
               </div>
-              <div className="w-full h-full border border-[#131E42] rounded-xl flex flex-col items-center">
-                <div className=" flex items-center justify-center bg-[#E9E9E9] rounded-full aspect-square mt-20 h-28 w-28">
+              <div className="w-full py-16 md:py-0 h-fit md:h-full border border-[#131E42] rounded-xl flex flex-col items-center">
+                <div className=" flex items-center justify-center bg-[#E9E9E9] rounded-full aspect-square md:mt-20 h-24 md:h-28 w-24 md:w-28">
                   <Image width={36} height={36} src="/doc.png" alt="Document" />
                 </div>
-                <h3 className="text-3xl font-medium text-center mt-4 text-[#131E42]">
+                <h3 className="text-2xl px-5 font-medium text-center mt-4 text-[#131E42]">
                   Visa Application
                 </h3>
               </div>
             </div>
-            <div className="w-full flex items-center h-full gap-6">
-              <div className="w-full h-full border border-[#131E42] rounded-xl flex flex-col items-center">
-                <div className=" flex items-center justify-center bg-[#E9E9E9] rounded-full aspect-square h-28 w-28 mt-20">
+            <div className="w-full flex flex-col md:flex-row items-center h-full gap-4 md:gap-6">
+              <div className="w-full h-fit md:h-full py-16 md:py-0 border border-[#131E42] rounded-xl flex flex-col items-center">
+                <div className=" flex items-center justify-center bg-[#E9E9E9] rounded-full aspect-square h-24 md:h-28 w-24 md:w-28 md:mt-20">
                   <Image
                     width={52}
                     height={52}
@@ -54,21 +54,21 @@ const ServiceSection = () => {
                     alt="Registration"
                   />
                 </div>
-                <h3 className="text-3xl font-medium text-center mt-4 text-[#131E42]">
+                <h3 className="text-2xl px-5 font-medium text-center mt-4 text-[#131E42]">
                   NCAA/NAIA <br />
                   Registration and Guidance
                 </h3>
               </div>
-              <div className="w-full h-full border border-[#131E42] rounded-xl flex flex-col items-center">
-                <div className=" flex items-center justify-center bg-[#E9E9E9] rounded-full aspect-square mt-20 h-28 w-28">
+              <div className="w-full py-16 h-fit md:h-full border border-[#131E42] rounded-xl flex flex-col items-center">
+                <div className=" flex items-center justify-center bg-[#E9E9E9] rounded-full aspect-square md:mt-20 h-24 md:h-28 w-24 md:w-28">
                   <Image width={52} height={52} src="/dollar.png" alt="Money" />
                 </div>
-                <h3 className="text-3xl font-medium text-center mt-4 text-[#131E42]">
+                <h3 className="text-2xl px-5 font-medium text-center mt-4 text-[#131E42]">
                   Scholarship <br /> Negotiation
                 </h3>
               </div>
-              <div className="w-full h-full border border-[#131E42] rounded-xl flex flex-col items-center">
-                <div className=" flex items-center justify-center bg-[#E9E9E9] rounded-full aspect-square mt-20 h-28 w-28">
+              <div className="w-full py-16 md:py-0 h-fit md:h-full border border-[#131E42] rounded-xl flex flex-col items-center">
+                <div className=" flex items-center justify-center bg-[#E9E9E9] rounded-full aspect-square md:mt-20 h-24 md:h-28 w-24 md:w-28">
                   <Image
                     width={36}
                     height={36}
@@ -76,7 +76,7 @@ const ServiceSection = () => {
                     alt="Promotion"
                   />
                 </div>
-                <h3 className="text-3xl font-medium text-center mt-4 text-[#131E42]">
+                <h3 className="text-2xl px-5 font-medium text-center mt-4 text-[#131E42]">
                   Promotion
                 </h3>
               </div>

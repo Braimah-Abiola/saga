@@ -54,24 +54,24 @@ const ContactSection = () => {
   return (
     <div id="contact" className="mt-60">
       <Wrapper>
-        <div className="w-full px-48">
-          <div className="flex items-center justify-between w-full gap-10 h-[53rem]">
+        <div className="w-full md:px-20">
+          <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4 md:gap-10 md:h-[53rem]">
             <div className="w-full flex flex-col items-start gap-4">
-              <div className="h-fit border border-[#131E42] rounded-xl px-8 w-full py-14">
-                <div className=" w-fit px-4 py-2 rounded-full border border-[#131E42] flex items-center justify-center">
+              <div className="h-fit border border-[#131E42] rounded-xl px-4 md:px-8 w-full py-6 md:py-14">
+                <div className=" w-fit px-4 py-1 md:py-2 rounded-full border border-[#131E42] flex items-center justify-center">
                   <p className=" text-lg font-normal text-[#131E42]">
                     Fill The Form
                   </p>
                 </div>
-                <h2 className=" font-semibold text-4xl mt-6 text-[#131E42]">
+                <h2 className=" font-semibold text-3xl md:text-4xl mt-4 md:mt-6 text-[#131E42]">
                   Contact Us
                 </h2>
-                <p className=" font-normal text-xl mt-2">
+                <p className=" font-normal text-lg md:text-xl mt-2">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit,{" "}
-                  <br /> sed do eiusmod tempor
+                  <br className=" hidden md:block" /> sed do eiusmod tempor
                 </p>
               </div>
-              <div className="h-fit border border-[#131E42] rounded-xl px-8  w-full py-12 bg-white">
+              <div className="h-fit border border-[#131E42] rounded-xl px-4 md:px-8 w-full py-8 md:py-12 bg-white">
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)}>
                     <FormField
@@ -151,7 +151,7 @@ const ContactSection = () => {
                 </Form>
               </div>
             </div>
-            <div className="w-full relative h-full rounded-2xl">
+            <div className="w-full relative h-[40rem] md:h-full rounded-2xl">
               <Image
                 fill
                 alt="Contact us"

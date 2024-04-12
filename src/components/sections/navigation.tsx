@@ -8,6 +8,8 @@ import Wrapper from "../wrapper/wrapper";
 import { useEffect, useState } from "react";
 import { NavItems } from "../ui/nav-items";
 import NavActions from "../ui/nav-actions";
+import { ArrowRight, Menu } from "lucide-react";
+import { Button } from "../ui/button";
 
 const NavigationSection = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,7 +39,7 @@ const NavigationSection = () => {
       }`}
       id="home"
     >
-      <Wrapper className="flex flex-row justify-between items-center">
+      <Wrapper className="flex flex-row justify-between items-center 2xl:px-40">
         <Link href="/" className="w-full">
           <div className="relative w-[135px] h-[55px] md:w-[135px] md:h-[55px] hover:scale-110 transition-all ease-in-out">
             <Image
@@ -65,12 +67,7 @@ const NavigationSection = () => {
             <SheetTrigger>
               <div className="primary-button-small-backdrop px-5 xl:p-[3px] rounded-[14px] ">
                 <div className="primary-button-small aspect-square   font-medium rounded-[12px] px-2.5 py-2.5">
-                  <Image
-                    width={28}
-                    height={8}
-                    src="/img/menu.svg"
-                    alt="Menu icon"
-                  />
+                  <Menu />
                 </div>
               </div>
             </SheetTrigger>
@@ -80,7 +77,7 @@ const NavigationSection = () => {
                   <div className="relative w-[135px] h-[55px] md:w-[135px] md:h-[55px] hover:scale-110 transition-all ease-in-out">
                     <Image
                       fill
-                      src="/img/logo.png"
+                      src="/logo.png"
                       className=" object-contain object-center"
                       quality={100}
                       alt="Fashva logo"
@@ -89,40 +86,45 @@ const NavigationSection = () => {
                 </Link>
               </SheetClose>
               <div className="w-full flex flex-col items-start justify-start mt-10">
-                <div className="text-black uppercase font-medium   text-lg flex flex-col items-start">
+                <div className="text-black font-normal text-lg flex flex-col items-start">
                   <SheetClose asChild>
                     <Link href="/">
-                      <h4 className="mt-6">Home</h4>
+                      <h4 className="mt-4">Home</h4>
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
                     <Link href="/#about-us">
-                      <h4 className="mt-6">About Us</h4>
+                      <h4 className="mt-4">About Us</h4>
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
                     <Link href="/#services">
-                      <h4 className="mt-6">Services</h4>
+                      <h4 className="mt-4">Services</h4>
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link href="/#faq">
-                      <h4 className="mt-6">FAQs</h4>
+                    <Link href="/#news">
+                      <h4 className="mt-4">News</h4>
                     </Link>
                   </SheetClose>
                   <SheetClose asChild>
-                    <Link href="/#case-studies">
-                      <h4 className="mt-6">Case Studies</h4>
+                    <Link href="/#contact">
+                      <h4 className="mt-4">Contact Us</h4>
                     </Link>
                   </SheetClose>
-                  <SheetClose asChild>
-                    <Link href="/blogs">
-                      <h4 className="mt-6 mb-8">Blog</h4>
-                    </Link>
-                  </SheetClose>
-                  <div className="w-full flex flex-col items-start gap-1">
+                  <div className="w-full flex items-start gap-3 mt-6">
                     <SheetClose asChild>
-                      <Link href="/schedule-call"></Link>
+                      <Button className=" group">
+                        Create account{" "}
+                        <div className="h-6 w-6 ml-4 aspect-square rounded-full bg-white flex items-center justify-center">
+                          <ArrowRight className="h-4 w-4 text-black group-hover:-rotate-45 transition-all ease-in-out duration-300" />
+                        </div>
+                      </Button>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Button className=" bg-transparent" variant="outline">
+                        Login
+                      </Button>
                     </SheetClose>
                   </div>
                 </div>
