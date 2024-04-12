@@ -3,7 +3,7 @@ import Wrapper from "../wrapper/wrapper";
 
 const ServiceSection = () => {
   return (
-    <div id="services" className="mt-20 md:mt-40">
+    <div id="services" className="mt-20 md:mt-20">
       <Wrapper className="md:py-20">
         <div className="flex flex-col md:flex-row items-center justify-between w-full md:h-[45rem] gap-4 md:gap-10 md:px-20">
           <div className=" w-full md:w-[50%] h-[40rem] md:h-full">

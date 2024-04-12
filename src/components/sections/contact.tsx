@@ -52,7 +52,7 @@ const ContactSection = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {};
 
   return (
-    <div id="contact" className="md:mt-60">
+    <div id="contact" className="md:mt-20">
       <Wrapper>
         <div className="w-full md:px-20">
           <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4 md:gap-10 md:h-[53rem]">

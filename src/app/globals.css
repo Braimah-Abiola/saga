@@ -73,21 +73,18 @@
 }
 
 /* CHROME */
-::-webkit-scrollbar {
+.section::-webkit-scrollbar {
   width: 0.5rem;
 }
 
-::-webkit-scrollbar-track {
+.section::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 300px;
 }
 
-::-webkit-scrollbar-thumb {
+.section::-webkit-scrollbar-thumb {
   background: #131e42;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 300px;
 }
 
 .grainy {

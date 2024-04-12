@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const NewSection = () => {
   return (
-    <div id="news" className="mt-0 md:mt-40">
+    <div id="news" className="mt-0 md:mt-0">
       <Wrapper className="py-20">
         <h2 className="text-[#131E42] text-4xl md:text-5xl font-semibold md:px-20 mb-10">
           News

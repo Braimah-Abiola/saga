@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const AboutSection = () => {
   return (
-    <div id="about" className="w-full mt-0 md:mt-40">
+    <div id="about" className="w-full mt-0 md:mt-20">
       <Wrapper>
         <div className="flex flex-col-reverse md:flex-row items-start justify-between w-full gap-0 md:gap-20 md:px-20">
           <div className="w-full h-[400px] md:h-[500px] rounded-xl relative">
