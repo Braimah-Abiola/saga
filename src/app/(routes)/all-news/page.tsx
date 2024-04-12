@@ -13,7 +13,7 @@ const AllNews = () => {
             </h1>
           </div>
 
-          <div className="w-full flex-col md:flex-row items-center justify-between gap-10 mt-8 md:mt-20">
+          <div className="w-full flex flex-col md:flex-row items-center justify-between gap-10 mt-8 md:mt-20">
             <div className=" w-full md:w-[80%] h-[320px] md:h-[500px] relative rounded-xl overflow-hidden group">
               <Image
                 fill
@@ -50,7 +50,7 @@ const AllNews = () => {
             </div>
           </div>
 
-          <div className="w-full flex-col md:flex-row items-center justify-between gap-10 mt-8 md:mt-20">
+          <div className="w-full flex flex-col md:flex-row items-center justify-between gap-10 mt-8 md:mt-20">
             <div className=" w-full md:w-[80%] h-[320px] md:h-[500px] relative rounded-xl overflow-hidden group">
               <Image
                 fill
@@ -87,7 +87,7 @@ const AllNews = () => {
             </div>
           </div>
 
-          <div className="w-full flex-col md:flex-row items-center justify-between gap-10 mt-8 md:mt-20">
+          <div className="w-full flex flex-col md:flex-row items-center justify-between gap-10 mt-8 md:mt-20">
             <div className=" w-full md:w-[80%] h-[320px] md:h-[500px] relative rounded-xl overflow-hidden group">
               <Image
                 fill
@@ -124,7 +124,7 @@ const AllNews = () => {
             </div>
           </div>
 
-          <div className="w-full flex-col md:flex-row items-center justify-between gap-10 mt-8 md:mt-20">
+          <div className="w-full flex flex-col md:flex-row items-center justify-between gap-10 mt-8 md:mt-20">
             <div className=" w-full md:w-[80%] h-[320px] md:h-[500px] relative rounded-xl overflow-hidden group">
               <Image
                 fill

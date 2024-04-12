@@ -15,6 +15,23 @@ const ServiceSection = () => {
                 src="/service-img.png"
                 alt="Services"
               />
+
+              <div className="w-full h-fit absolute bottom-10 px-4 md:px-10">
+                <div className=" h-12 w-fit px-4 rounded-full border border-white flex items-center justify-center">
+                  <p className="text-white text-lg md:text-xl font-normal">
+                    Our Services
+                  </p>
+                </div>
+                <h4 className=" font-semibold text-3xl md:text-4xl text-white mt-2">
+                  Services
+                </h4>
+                <p className="text-white text-lg md:text-xl font-normal mt-2 md:mt-4">
+                  Saga Scholarships offers a bespoke service. We promote your
+                  athletic and academic qualities to colleges and high school
+                  coaches in America and support you with administrative duties
+                  throughout the process.
+                </p>
+              </div>
             </div>
           </div>
           <div className="w-full h-full flex flex-col justify-between gap-4 md:gap-6">
@@ -59,7 +76,7 @@ const ServiceSection = () => {
                   Registration and Guidance
                 </h3>
               </div>
-              <div className="w-full py-16 h-fit md:h-full border border-[#131E42] rounded-xl flex flex-col items-center">
+              <div className="w-full py-16 md:py-0 h-fit md:h-full border border-[#131E42] rounded-xl flex flex-col items-center">
                 <div className=" flex items-center justify-center bg-[#E9E9E9] rounded-full aspect-square md:mt-20 h-24 md:h-28 w-24 md:w-28">
                   <Image width={52} height={52} src="/dollar.png" alt="Money" />
                 </div>

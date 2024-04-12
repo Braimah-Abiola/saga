@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { useInView, motion } from "framer-motion";
 import Wrapper from "../wrapper/wrapper";
 import { useRef } from "react";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -25,7 +26,7 @@ const HeroSection = () => {
           height={50}
           src="/1.png"
           quality={100}
-          className=" left-10 md:left-[20%] top-4 md:top-14 object-contain object-center absolute"
+          className=" left-10 md:left-[20%] top-4 md:top-14 object-contain object-center absolute hidden md:block"
           alt="Happy students"
         />
         <Image
@@ -34,7 +35,7 @@ const HeroSection = () => {
           height={50}
           src="/2.png"
           quality={100}
-          className=" left-10 md:left-80 top-72 md:top-48 object-contain object-center absolute"
+          className=" left-10 md:left-80 top-72 md:top-48 object-contain object-center absolute hidden md:block"
           alt="Happy students"
         />
         <Image
@@ -54,7 +55,7 @@ const HeroSection = () => {
           height={50}
           src="/1.png"
           quality={100}
-          className=" right-[20%] top-14 object-contain object-center absolute"
+          className=" right-[20%] top-14 object-contain object-center absolute hidden md:block"
           alt="Happy students"
         />
         <Image
@@ -63,7 +64,7 @@ const HeroSection = () => {
           height={50}
           src="/2.png"
           quality={100}
-          className=" right-4 md:right-80 top-48 object-contain object-center absolute"
+          className=" right-4 md:right-80 top-48 object-contain object-center absolute hidden md:block"
           alt="Happy students"
         />
         <Image
@@ -81,11 +82,42 @@ const HeroSection = () => {
           unforgettable memories.
         </p>
         <div className="flex items-center gap-4 mt-8">
-          <Button>Contact Us</Button>
-          <Button variant="outline">Learn More</Button>
+          <Link href="/#contact">
+            <Button>Contact Us</Button>
+          </Link>
+          <Link href="/about-us">
+            <Button variant="outline">Learn More</Button>
+          </Link>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between w-full gap-4 md:gap-14 py-20 md:px-20">
+        <div className="w-full px-4 flex items-center gap-1 justify-center mt-10">
+          <Image
+            width={50}
+            height={50}
+            src="/1.png"
+            quality={100}
+            className="object-contain object-center"
+            alt="Happy students"
+          />
+          <Image
+            width={50}
+            height={50}
+            src="/2.png"
+            quality={100}
+            className="object-contain object-center"
+            alt="Happy students"
+          />
+          <Image
+            width={50}
+            height={50}
+            src="/3.png"
+            quality={100}
+            className="object-contain object-center"
+            alt="Happy students"
+          />
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between w-full gap-4 md:gap-14 py-12 md:py-20 md:px-20">
           <div className="w-full rounded-xl h-[37rem] relative group">
             <Image
               fill

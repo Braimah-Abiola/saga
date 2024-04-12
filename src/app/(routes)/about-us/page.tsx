@@ -5,16 +5,18 @@ const AboutPage = () => {
   return (
     <div className="w-full">
       <Wrapper>
-        <div className="px-20 flex flex-col w-full items-start">
+        <div className="md:px-20 flex flex-col w-full items-start">
           <div className="flex items-center w-full justify-center mt-12">
-            <h1 className="text-[#131E42] font-medium 2xl:font-semibold text-5xl xl:text-6xl 2xl:text-4xl md:-mt-0 text-center">
-              Saga Scholarship create opportunities for <br />
-              talented athletes to combine top level sports <br />
+            <h1 className="text-[#131E42] font-medium 2xl:font-semibold text-3xl xl:text-6xl 2xl:text-4xl md:-mt-0 text-center">
+              Saga Scholarship create opportunities for{" "}
+              <br className="hidden md:block" />
+              talented athletes to combine top level sports{" "}
+              <br className="hidden md:block" />
               while studying at American universities.
             </h1>
           </div>
 
-          <div className="relative w-full h-[50rem] overflow-hidden group rounded-3xl mt-12">
+          <div className="relative w-full h-[40rem] md:h-[50rem] overflow-hidden group rounded-3xl mt-12">
             <Image
               fill
               quality={100}
@@ -25,10 +27,10 @@ const AboutPage = () => {
           </div>
 
           <div className="flex flex-col items-center w-full justify-center mt-20">
-            <h1 className="text-[#131E42] font-medium 2xl:font-semibold text-5xl xl:text-6xl 2xl:text-4xl md:-mt-0 text-center">
+            <h1 className="text-[#131E42] font-medium 2xl:font-semibold text-3xl xl:text-6xl 2xl:text-4xl md:-mt-0 text-center">
               About Us
             </h1>
-            <p className="text-lg text-black text-center w-[85%] mt-4">
+            <p className="text-lg text-black text-center w-full md:w-[85%] mt-4">
               Saga Scholarship is led by an experienced team who have all been
               through this process and graduated as student-athletes. Since
               being founded in 2020, we have helped many students navigate

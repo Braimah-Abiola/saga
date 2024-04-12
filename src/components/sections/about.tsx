@@ -43,9 +43,6 @@ const AboutSection = () => {
             <h2 className="text-[#131E42] text-4xl md:text-5xl font-semibold mb-4 md:mb-0">
               Our Student-Athletes
             </h2>
-            <Link href="/athletes">
-              <Button variant="outline">See our athletes</Button>
-            </Link>
           </div>
 
           <Marquee autoFill speed={200}>
@@ -267,6 +264,12 @@ const AboutSection = () => {
               </div>
             </div>
           </Marquee>
+
+          <div className="w-full px-4 md:px-40 md:mt-10 flex items-center justify-start">
+            <Link href="/athletes">
+              <Button variant="outline">See our athletes</Button>
+            </Link>
+          </div>
         </div>
       </Wrapper>
     </div>
