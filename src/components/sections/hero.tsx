@@ -90,31 +90,33 @@ const HeroSection = () => {
           </Link>
         </div>
 
-        <div className="w-full px-4 flex items-center gap-1 justify-center mt-10">
-          <Image
-            width={50}
-            height={50}
-            src="/1.png"
-            quality={100}
-            className="object-contain object-center"
-            alt="Happy students"
-          />
-          <Image
-            width={50}
-            height={50}
-            src="/2.png"
-            quality={100}
-            className="object-contain object-center"
-            alt="Happy students"
-          />
-          <Image
-            width={50}
-            height={50}
-            src="/3.png"
-            quality={100}
-            className="object-contain object-center"
-            alt="Happy students"
-          />
+        <div className="md:hidden">
+          <div className="w-full px-4 flex items-center gap-1 justify-center mt-10">
+            <Image
+              width={50}
+              height={50}
+              src="/1.png"
+              quality={100}
+              className="object-contain object-center"
+              alt="Happy students"
+            />
+            <Image
+              width={50}
+              height={50}
+              src="/2.png"
+              quality={100}
+              className="object-contain object-center"
+              alt="Happy students"
+            />
+            <Image
+              width={50}
+              height={50}
+              src="/3.png"
+              quality={100}
+              className="object-contain object-center"
+              alt="Happy students"
+            />
+          </div>
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-between w-full gap-4 md:gap-14 py-12 md:py-20 md:px-20">
