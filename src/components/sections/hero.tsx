@@ -1,11 +1,11 @@
 "use client";
 
+import { motion, useAnimation, useInView } from "framer-motion";
 import Image from "next/image";
-import { Button } from "../ui/button";
-import { useInView, motion, useAnimation } from "framer-motion";
-import Wrapper from "../wrapper/wrapper";
-import { useRef, useEffect } from "react";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { Button } from "../ui/button";
+import Wrapper from "../wrapper/wrapper";
 
 const HeroSection = () => {
   const sectionRef = useRef(null);
@@ -38,7 +38,7 @@ const HeroSection = () => {
           x: 0,
           opacity: 1,
           transition: {
-            duration: 0.5,
+            duration: 1.5,
             delay: 0.2,
           },
         });
@@ -48,8 +48,8 @@ const HeroSection = () => {
 
   return (
     <div ref={sectionRef} id="hero" className="w-full relative">
-      <Wrapper className="flex flex-col items-center pt-20 relative">
-        <motion.div className="absolute left-[30%] top-48 h-[1px]">
+      <Wrapper className="flex flex-col items-center pt-10 md:pt-20 relative">
+        <motion.div className="absolute left-[30%] top-48 h-[1px] hidden lg:block">
           <svg
             width="187"
             height="106"
@@ -186,7 +186,7 @@ const HeroSection = () => {
           <motion.div
             initial={{ x: "-100%", opacity: 0 }}
             animate={controls}
-            className="w-full rounded-xl h-[37rem] relative group"
+            className="w-full rounded-xl h-[35rem] md:h-[37rem] relative group"
           >
             <Image
               fill
@@ -205,7 +205,7 @@ const HeroSection = () => {
               </div>
             </div>
           </motion.div>
-          <div className="w-full border border-[#131E42] text-[#131E42] flex flex-col items-start rounded-xl h-[37rem]">
+          <div className="w-full border border-[#131E42] text-[#131E42] flex flex-col items-start rounded-xl h-[35rem] md:h-[37rem]">
             <div className="flex flex-col px-10 mt-20">
               <h3 className="text-5xl font-semibold">34K+</h3>
               <h4 className=" text-3xl mt-2 font-medium">
@@ -233,7 +233,7 @@ const HeroSection = () => {
           <motion.div
             initial={{ x: "100%", opacity: 0 }}
             animate={controls}
-            className="w-full rounded-xl h-[37rem] relative group"
+            className="w-full rounded-xl h-[35rem] md:h-[37rem] relative group"
           >
             <Image
               fill
@@ -280,7 +280,7 @@ export function MaskText() {
     <div ref={body}>
       <div className="lineMask z-50">
         <motion.h1
-          className="text-[#131E42] font-semibold 2xl:font-semibold text-5xl xl:text-6xl 2xl:text-[4.8rem] md:-mt-0"
+          className="text-[#131E42] font-semibold 2xl:font-semibold text-5xl xl:text-6xl 2xl:text-[4.8rem] md:-mt-0 text-center"
           variants={animation}
           initial="initial"
           animate={isInView ? "enter" : ""}

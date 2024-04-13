@@ -16,6 +16,9 @@ import Wrapper from "../wrapper/wrapper";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
 
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
+
 const formSchema = z.object({
   email: z.string().email({
     message: "Email is required",
@@ -51,8 +54,46 @@ const ContactSection = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {};
 
+  const sectionRef = useRef(null);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  });
+
+  const handleIntersection = (entries: any) => {
+    entries.forEach((entry: any) => {
+      if (entry.isIntersecting) {
+        controls.start({
+          x: 0,
+          opacity: 1,
+          transition: {
+            duration: 1.2,
+            delay: 0.2,
+          },
+        });
+      }
+    });
+  };
+
   return (
-    <div id="contact" className="md:mt-20">
+    <div ref={sectionRef} id="contact" className="md:mt-20">
       <Wrapper>
         <div className="w-full md:px-20">
           <div className="flex flex-col md:flex-row items-center justify-between w-full gap-4 md:gap-10 md:h-[53rem]">
@@ -151,7 +192,11 @@ const ContactSection = () => {
                 </Form>
               </div>
             </div>
-            <div className="w-full relative h-[40rem] md:h-full rounded-2xl">
+            <motion.div
+              initial={{ x: "100%", opacity: 0 }}
+              animate={controls}
+              className="w-full relative h-[40rem] md:h-full rounded-2xl"
+            >
               <Image
                 fill
                 alt="Contact us"
@@ -159,7 +204,7 @@ const ContactSection = () => {
                 src="/contact-img.png"
                 quality={100}
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </Wrapper>

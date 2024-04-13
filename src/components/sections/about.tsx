@@ -1,15 +1,65 @@
+"use client";
+
 import Image from "next/image";
 import Wrapper from "../wrapper/wrapper";
 import { Button } from "../ui/button";
 import Marquee from "react-fast-marquee";
 import Link from "next/link";
 
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useRef } from "react";
+
 const AboutSection = () => {
+  const sectionRef = useRef(null);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  });
+
+  const handleIntersection = (entries: any) => {
+    entries.forEach((entry: any) => {
+      if (entry.isIntersecting) {
+        controls.start({
+          x: 0,
+          opacity: 1,
+          transition: {
+            duration: 1.5,
+            delay: 0.2,
+          },
+        });
+      }
+    });
+  };
+
   return (
     <div id="about" className="w-full mt-0 md:mt-20">
       <Wrapper>
-        <div className="flex flex-col-reverse md:flex-row items-start justify-between w-full gap-0 md:gap-20 md:px-20">
-          <div className="w-full h-[400px] md:h-[500px] rounded-xl relative">
+        <div
+          ref={sectionRef}
+          className="flex flex-col-reverse md:flex-row items-start justify-between w-full gap-0 md:gap-20 md:px-20"
+        >
+          <motion.div
+            initial={{ x: "-100%", opacity: 0 }}
+            animate={controls}
+            className="w-full h-[400px] md:h-[500px] rounded-xl relative"
+          >
             <Image
               fill
               className=" object-cover object-center rounded-xl"
@@ -17,7 +67,7 @@ const AboutSection = () => {
               alt="About"
               quality={100}
             />
-          </div>
+          </motion.div>
           <div className="w-full flex flex-col items-start py-10">
             <h2 className="text-[#131E42] text-4xl md:text-5xl font-semibold">
               About Us
@@ -30,7 +80,10 @@ const AboutSection = () => {
               expertise.
             </p>
             <Link href="/about-us">
-              <Button className="mt-6 hover:scale-110 ease-in-out transition-all duration-500" variant="outline">
+              <Button
+                className="mt-6 hover:scale-110 ease-in-out transition-all duration-500"
+                variant="outline"
+              >
                 Learn More
               </Button>
             </Link>

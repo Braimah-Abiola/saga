@@ -114,17 +114,21 @@ const NavigationSection = () => {
                   </SheetClose>
                   <div className="w-full flex items-start gap-3 mt-6">
                     <SheetClose asChild>
-                      <Button className=" group">
-                        Create account{" "}
-                        <div className="h-6 w-6 ml-4 aspect-square rounded-full bg-white flex items-center justify-center">
-                          <ArrowRight className="h-4 w-4 text-black group-hover:-rotate-45 transition-all ease-in-out duration-300" />
-                        </div>
-                      </Button>
+                      <Link href="/create-account">
+                        <Button className=" group">
+                          Create account{" "}
+                          <div className="h-6 w-6 ml-4 aspect-square rounded-full bg-white flex items-center justify-center">
+                            <ArrowRight className="h-4 w-4 text-black group-hover:-rotate-45 transition-all ease-in-out duration-300" />
+                          </div>
+                        </Button>
+                      </Link>
                     </SheetClose>
                     <SheetClose asChild>
-                      <Button className=" bg-transparent" variant="outline">
-                        Login
-                      </Button>
+                      <Link href="/login">
+                        <Button className=" bg-transparent" variant="outline">
+                          Login
+                        </Button>
+                      </Link>
                     </SheetClose>
                   </div>
                 </div>
