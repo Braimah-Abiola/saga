@@ -30,7 +30,7 @@ const AboutSection = () => {
               expertise.
             </p>
             <Link href="/about-us">
-              <Button className="mt-6" variant="outline">
+              <Button className="mt-6 hover:scale-110 ease-in-out transition-all duration-500" variant="outline">
                 Learn More
               </Button>
             </Link>

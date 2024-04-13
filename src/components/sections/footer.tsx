@@ -2,6 +2,7 @@ import Link from "next/link";
 import Wrapper from "../wrapper/wrapper";
 import Image from "next/image";
 import { Mail, Phone } from "lucide-react";
+import AnimatedLink from "../ui/animated-link";
 
 const FooterSection = () => {
   return (
@@ -19,14 +20,14 @@ const FooterSection = () => {
               />
             </div>
           </Link>
-          <div className="flex flex-col md:flex-row items-center gap-8 mt-8">
-            <div className="flex items-center gap-2">
+          <div className="flex flex-col md:flex-row items-center gap-8 mt-8 w-full md:justify-end">
+            <div className="flex items-center gap-2 w-fit">
               <Mail />
-              <p>skage@sagascholarships.com</p>
+              <AnimatedLink link="" text="skage@sagascholarships.com" />
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 w-fit">
               <Phone />
-              <p>skage@sagascholarships.com</p>
+              <AnimatedLink link="" text="+1 313 487 3589" />
             </div>
           </div>
         </div>

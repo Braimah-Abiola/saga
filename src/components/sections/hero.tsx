@@ -2,23 +2,79 @@
 
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { useInView, motion } from "framer-motion";
+import { useInView, motion, useAnimation } from "framer-motion";
 import Wrapper from "../wrapper/wrapper";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Link from "next/link";
 
 const HeroSection = () => {
+  const sectionRef = useRef(null);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  });
+
+  const handleIntersection = (entries: any) => {
+    entries.forEach((entry: any) => {
+      if (entry.isIntersecting) {
+        controls.start({
+          x: 0,
+          opacity: 1,
+          transition: {
+            duration: 0.5,
+            delay: 0.2,
+          },
+        });
+      }
+    });
+  };
+
   return (
-    <div id="hero" className="w-full relative">
+    <div ref={sectionRef} id="hero" className="w-full relative">
       <Wrapper className="flex flex-col items-center pt-20 relative">
-        <Image
-          width={100}
-          height={100}
-          src="/hero-arrow.png"
-          quality={100}
-          className=" left-[35%] top-56 object-contain object-center absolute hidden md:block"
-          alt="Arrow"
-        />
+        <motion.div className="absolute left-[30%] top-48 h-[1px]">
+          <svg
+            width="187"
+            height="106"
+            viewBox="0 0 207 126"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <motion.path
+              d="M4.71119 9.30451C30.8013 29.4877 58.0397 39.7087 89.7601 26.4986C100.438 22.0518 111.64 10.1308 93.6044 5.03506C76.8503 0.30147 55.7712 15.5957 52.2585 32.1729C46.9872 57.0496 69.5967 73.8288 90.74 81.3389C123.451 92.9577 157.185 101.786 191.813 104.054C198.867 104.515 166.862 73.4785 176.426 85.4227C183.177 93.8533 190.939 99.1597 199.767 105.161C206.123 109.483 200.608 108.851 194.772 109.505C185.286 110.567 173.754 114.856 166.558 121.279"
+              stroke="#F1EBEA"
+              stroke-width="6"
+              stroke-linecap="round"
+              initial={{
+                strokeDasharray: 500,
+                strokeDashoffset: 500,
+              }}
+              animate={{
+                strokeDashoffset: 0,
+              }}
+              transition={{
+                duration: 1,
+              }}
+            />
+          </svg>
+        </motion.div>
 
         <Image
           id="reviews"
@@ -83,10 +139,17 @@ const HeroSection = () => {
         </p>
         <div className="flex items-center gap-4 mt-8">
           <Link href="/#contact">
-            <Button>Contact Us</Button>
+            <Button className=" hover:-translate-y-2 ease-in-out transition-all duration-300">
+              Contact Us
+            </Button>
           </Link>
           <Link href="/about-us">
-            <Button variant="outline">Learn More</Button>
+            <Button
+              className=" hover:-translate-y-2 ease-in-out transition-all duration-300"
+              variant="outline"
+            >
+              Learn More
+            </Button>
           </Link>
         </div>
 
@@ -120,7 +183,11 @@ const HeroSection = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-between w-full gap-4 md:gap-14 py-12 md:py-20 md:px-20">
-          <div className="w-full rounded-xl h-[37rem] relative group">
+          <motion.div
+            initial={{ x: "-100%", opacity: 0 }}
+            animate={controls}
+            className="w-full rounded-xl h-[37rem] relative group"
+          >
             <Image
               fill
               src="/hero-img-1.png"
@@ -137,7 +204,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
           <div className="w-full border border-[#131E42] text-[#131E42] flex flex-col items-start rounded-xl h-[37rem]">
             <div className="flex flex-col px-10 mt-20">
               <h3 className="text-5xl font-semibold">34K+</h3>
@@ -150,15 +217,24 @@ const HeroSection = () => {
                 fill
                 src="/hero-bg.png"
                 quality={100}
-                className="object-contain object-center rounded-xl"
+                className="object-contain object-center rounded-xl animate-pulse"
                 alt="Gradient pattern"
               />
             </div>
             <div className="flex flex-col px-10">
-              <Button variant="outline">Learn more</Button>
+              <Button
+                className="hover:scale-110 ease-in-out transition-all duration-500"
+                variant="outline"
+              >
+                Learn more
+              </Button>
             </div>
           </div>
-          <div className="w-full rounded-xl h-[37rem] relative group">
+          <motion.div
+            initial={{ x: "100%", opacity: 0 }}
+            animate={controls}
+            className="w-full rounded-xl h-[37rem] relative group"
+          >
             <Image
               fill
               src="/hero-img-2.png"
@@ -173,7 +249,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </Wrapper>
     </div>
