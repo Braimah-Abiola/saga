@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" className=" scroll-smooth overflow-x-hidden">
       <body
         className={cn(
-          "antialiased grainy bg-white select-none overflow-x-hidden",
+          "antialiased grainy bg-white select-none",
           inter.className
         )}
       >

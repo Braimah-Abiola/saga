@@ -133,7 +133,7 @@ const HeroSection = () => {
           alt="Happy students"
         />
         <MaskText />
-        <p className="text-lg font-normal text-[#131E42]/90 max-w-lg text-center mt-4">
+        <p className="text-lg font-normal text-[#131E42]/90 max-w-full w-full md:max-w-lg text-center mt-2 md:mt-4 bg-white grainy">
           Receive an American degree. Play the sport you love. Create
           unforgettable memories.
         </p>
@@ -153,7 +153,7 @@ const HeroSection = () => {
           </Link>
         </div>
 
-        <div className="md:hidden">
+        <div className="md:hidden w-full">
           <div className="w-full px-4 flex items-center gap-1 justify-center mt-10">
             <Image
               width={50}
@@ -182,12 +182,82 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between w-full gap-4 md:gap-14 py-12 md:py-20 md:px-20">
-          <motion.div
-            initial={{ x: "-100%", opacity: 0 }}
-            animate={controls}
-            className="w-full rounded-xl h-[35rem] md:h-[37rem] relative group"
-          >
+        <div className=" hidden md:block w-full">
+          <div className="flex flex-col md:flex-row items-center justify-center md:justify-between w-full gap-4 md:gap-14 py-12 md:py-20 md:px-20">
+            <motion.div
+              initial={{ x: "-100%", opacity: 0 }}
+              animate={controls}
+              className="w-full rounded-xl h-[35rem] md:h-[37rem] relative group"
+            >
+              <Image
+                fill
+                src="/hero-img-1.png"
+                quality={100}
+                className=" left-[35%] top-56 object-cover object-center absolute rounded-xl"
+                alt="Basketball athelete"
+              />
+              <div className="w-full h-full absolute bg-black/50 backdrop-blur-sm rounded-xl hidden group-hover:block ease-in-out duration-500 transition-all">
+                <div className="h-full w-full items-end flex flex-col">
+                  <div className="bg-white w-52 h-12 rounded-tr-xl rounded-bl-xl flex items-center justify-center">
+                    <p className="text-black font-normal text-lg">
+                      Get a scholarship
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            <div className="w-full border border-[#131E42] text-[#131E42] flex flex-col items-start rounded-xl h-[35rem] md:h-[37rem]">
+              <div className="flex flex-col px-10 mt-20">
+                <h3 className="text-5xl font-semibold">34K+</h3>
+                <h4 className=" text-3xl mt-2 font-medium">
+                  Success <br /> Stories
+                </h4>
+              </div>
+              <div className=" w-full h-60 relative">
+                <Image
+                  fill
+                  src="/hero-bg.png"
+                  quality={100}
+                  className="object-contain object-center rounded-xl animate-pulse"
+                  alt="Gradient pattern"
+                />
+              </div>
+              <div className="flex flex-col px-10">
+                <Button
+                  className="hover:scale-110 ease-in-out transition-all duration-500"
+                  variant="outline"
+                >
+                  Learn more
+                </Button>
+              </div>
+            </div>
+            <motion.div
+              initial={{ x: "100%", opacity: 0 }}
+              animate={controls}
+              className="w-full rounded-xl h-[35rem] md:h-[37rem] relative group"
+            >
+              <Image
+                fill
+                src="/hero-img-2.png"
+                quality={100}
+                className=" left-[35%] top-56 object-cover object-center absolute rounded-xl"
+                alt="Track athelete"
+              />
+              <div className="w-full h-full absolute bg-black/50 backdrop-blur-sm rounded-xl hidden group-hover:block ease-in-out duration-500 transition-all">
+                <div className="h-full w-full items-end flex flex-col">
+                  <div className="bg-white w-52 h-12 rounded-tr-xl rounded-bl-xl flex items-center justify-center">
+                    <p className="text-black font-normal text-lg">
+                      Play a sport
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        <div className="  md:hidden w-full">
+          <div className="w-full rounded-xl h-[35rem] md:h-[37rem] relative group mt-20 mb-4">
             <Image
               fill
               src="/hero-img-1.png"
@@ -204,7 +274,8 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
+
           <div className="w-full border border-[#131E42] text-[#131E42] flex flex-col items-start rounded-xl h-[35rem] md:h-[37rem]">
             <div className="flex flex-col px-10 mt-20">
               <h3 className="text-5xl font-semibold">34K+</h3>
@@ -230,11 +301,7 @@ const HeroSection = () => {
               </Button>
             </div>
           </div>
-          <motion.div
-            initial={{ x: "100%", opacity: 0 }}
-            animate={controls}
-            className="w-full rounded-xl h-[35rem] md:h-[37rem] relative group"
-          >
+          <div className="w-full rounded-xl h-[35rem] md:h-[37rem] relative group mt-4">
             <Image
               fill
               src="/hero-img-2.png"
@@ -249,7 +316,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </Wrapper>
     </div>
@@ -278,7 +345,7 @@ export function MaskText() {
 
   return (
     <div ref={body}>
-      <div className="lineMask z-50">
+      <div className="lineMask pb-1 z-50">
         <motion.h1
           className="text-[#131E42] font-semibold 2xl:font-semibold text-5xl xl:text-6xl 2xl:text-[4.8rem] md:-mt-0 text-center"
           variants={animation}
