@@ -5,7 +5,7 @@ const AboutPage = () => {
   return (
     <div className="w-full">
       <Wrapper>
-        <div className="md:px-20 flex flex-col w-full items-start">
+        <div className="md:px-40 flex flex-col w-full items-start">
           <div className="flex items-center w-full justify-center mt-12">
             <h1 className="text-[#131E42] font-medium 2xl:font-semibold text-3xl xl:text-6xl 2xl:text-4xl md:-mt-0 text-center">
               Saga Scholarship create opportunities for{" "}
@@ -16,7 +16,7 @@ const AboutPage = () => {
             </h1>
           </div>
 
-          <div className="relative w-full h-[40rem] md:h-[50rem] overflow-hidden group rounded-3xl mt-12">
+          <div className="relative w-full h-[38rem] md:h-[45rem] overflow-hidden group rounded-3xl mt-12">
             <Image
               fill
               quality={100}

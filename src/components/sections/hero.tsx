@@ -223,12 +223,14 @@ const HeroSection = () => {
                 />
               </div>
               <div className="flex flex-col px-10">
-                <Button
-                  className="hover:scale-110 ease-in-out transition-all duration-500"
-                  variant="outline"
-                >
-                  Learn more
-                </Button>
+                <Link href="/about-us">
+                  <Button
+                    className="hover:scale-110 ease-in-out transition-all duration-500"
+                    variant="outline"
+                  >
+                    Learn more
+                  </Button>
+                </Link>
               </div>
             </div>
             <motion.div

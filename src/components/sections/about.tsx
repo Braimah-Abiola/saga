@@ -49,7 +49,8 @@ const AboutSection = () => {
   };
 
   return (
-    <div id="about" className="w-full mt-0 md:mt-20">
+    <div className="w-full">
+      <div id="about" className="h-0 md:h-20" />
       <Wrapper>
         <div
           ref={sectionRef}
@@ -98,7 +99,7 @@ const AboutSection = () => {
             </h2>
           </div>
 
-          <Marquee autoFill speed={200}>
+          <Marquee pauseOnHover autoFill speed={200}>
             <div className="grid grid-cols-5 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 2xl:gap-8 pb-10 pt-5 md:pt-10 md:pb-5">
               <div className=" w-[300px] h-[400px] rounded-xl ml-4">
                 <div className="w-full h-full relative">
@@ -208,7 +209,7 @@ const AboutSection = () => {
             </div>
           </Marquee>
 
-          <Marquee autoFill speed={150}>
+          <Marquee pauseOnHover autoFill speed={150}>
             <div className="grid grid-cols-5 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 2xl:gap-8 pb-10 pt-5 md:pt-0 md:pb-5">
               <div className=" w-[300px] h-[400px] rounded-xl ml-4">
                 <div className="w-full h-full relative">
