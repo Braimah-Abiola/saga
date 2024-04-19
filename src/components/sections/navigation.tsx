@@ -107,29 +107,25 @@ const NavigationSection = () => {
                       <h4 className="mt-4">News</h4>
                     </Link>
                   </SheetClose>
-                  <SheetClose asChild>
-                    <Link href="/#contact">
-                      <h4 className="mt-4">Contact Us</h4>
-                    </Link>
-                  </SheetClose>
+
                   <div className="w-full flex items-start gap-3 mt-6">
                     <SheetClose asChild>
-                      <Link href="/create-account">
+                      <Link href="/#contact">
                         <Button className=" group">
-                          Create account{" "}
+                          Contact Us{" "}
                           <div className="h-6 w-6 ml-4 aspect-square rounded-full bg-white flex items-center justify-center">
                             <ArrowRight className="h-4 w-4 text-black group-hover:-rotate-45 transition-all ease-in-out duration-300" />
                           </div>
                         </Button>
                       </Link>
                     </SheetClose>
-                    <SheetClose asChild>
+                    {/* <SheetClose asChild>
                       <Link href="/login">
                         <Button className=" bg-transparent" variant="outline">
                           Login
                         </Button>
                       </Link>
-                    </SheetClose>
+                    </SheetClose> */}
                   </div>
                 </div>
               </div>
