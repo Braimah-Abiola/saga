@@ -11,6 +11,7 @@ import {
 import { athletes2024 } from "@/constants/data";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const AthletesPage = () => {
   return (
@@ -59,7 +60,7 @@ const AthletesPage = () => {
                   <p className="text-white font-semibold text-lg mb-2">{`${athlete.name}`}</p>
                   <p className="text-white">{`Year: ${athlete.year}`}</p>
                   <p className="text-white">{`Sport: ${athlete.sport}`}</p>
-                  <p className="text-white">{`Race: ${athlete.race}`}</p>
+                  <p className="text-white">{`Major: ${athlete.major}`}</p>
                   <p className="text-white">{`Country: ${athlete.country}`}</p>
                   <p className="text-white">{`University: ${athlete.university}`}</p>
                 </div>
@@ -72,7 +73,9 @@ const AthletesPage = () => {
           <h1 className="text-[#131E42] text-center font-medium 2xl:font-semibold text-4xl xl:text-6xl 2xl:text-4xl md:-mt-0 mb-5">
             Become a student-athlete
           </h1>
-          <Button>Create account</Button>
+          <Link href="/#contact">
+            <Button>Create account</Button>
+          </Link>
         </div>
       </Wrapper>
     </div>

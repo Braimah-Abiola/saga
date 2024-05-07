@@ -24,7 +24,7 @@ const NewSection = () => {
             <h3 className=" text-2xl md:text-3xl mt-6 font-medium text-[#131E42]">
               College A wins the 21st Colleges Soccer Competition
             </h3>
-            <Link href="/all-news">
+            <Link href="/news/college-a-wins-competition">
               <Button className="mt-4">Read More</Button>
             </Link>
           </div>
@@ -41,7 +41,7 @@ const NewSection = () => {
             <h3 className=" text-2xl md:text-3xl mt-6 font-medium text-[#131E42]">
               Two players selected by Inter Miami U20 Team
             </h3>
-            <Link href="/all-news">
+            <Link href="/news/players-selected-by-inter-miami">
               <Button className="mt-4">Read More</Button>
             </Link>
           </div>
@@ -60,7 +60,7 @@ const NewSection = () => {
             <h3 className=" text-3xl mt-6 font-medium text-[#131E42]">
               College C to face College F in the finals
             </h3>
-            <Link href="/all-news">
+            <Link href="/news/college-c-to-face-college-f">
               <Button className="mt-4">Read More</Button>
             </Link>
           </div>
@@ -77,7 +77,7 @@ const NewSection = () => {
             <h3 className=" text-3xl mt-6 font-medium text-[#131E42]">
               College Scouting started
             </h3>
-            <Link href="/all-news">
+            <Link href="/news/college-scouting-started">
               <Button className="mt-4">Read More</Button>
             </Link>
           </div>
